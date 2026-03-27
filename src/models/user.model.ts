@@ -2,7 +2,6 @@ import mongoose, {Schema, Document} from "mongoose"
 
 
 export interface MessageI extends Document {
-
     content: string;
     createdAt?: Date;
     updatedAt?: Date;
@@ -40,7 +39,7 @@ const userSchema: Schema<UserI> = new Schema({
     },
     email: {
         type: String,
-        required: [true, "userName is required"],
+        required: [true, "email is required"],
         match: [/.+\@.+\..+/, 'Please use a valid email address'],
         unique: true
     },
