@@ -22,7 +22,14 @@ Keep it friendly and engaging.
       prompt,
     });
 
-    return result.toTextStreamResponse();
+    return result.toTextStreamResponse()
+    // return Response.json({
+    //     message: "fetched ai message",
+    //     data: result.toTextStreamResponse()
+    // },
+    // {
+    //     status: 200
+    // })
   } catch (error) {
     console.error("Error:", error);
     return new Response(JSON.stringify({ message: "Something went wrong" }), {
